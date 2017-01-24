@@ -23,5 +23,5 @@ docker run -it \
   -e DB_ENV_POSTGRES_PASSWORD=${DB_PASSWORD} \
   -e DB_SCHEMA_NAME=${DB_SCHEMA_NAME} \
   -e DIFF_TYPES=data \
-  mlaccetti/liquibase \
+  konjak/liquibase \
   "generate"

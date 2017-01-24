@@ -10,7 +10,7 @@ Check out the `examples` folder for a sample of scripts for Windows/\*NIX that d
 
 By default runs a simple container with Liquibase:
 
-```docker run -it --name liquibase --rm mlaccetti/liquibase```
+```docker run -it --name liquibase --rm konjak/liquibase```
 
 In the shell you can perform the usual `liquibase` operations.
 
@@ -37,7 +37,7 @@ docker run -it \
 -e DB_PASS="$DB_PASS" \
 -e LIQUIBASE_INCLUSION_FILE="$LIQUIBASE_INCLUSION_FILE" \
 -v /$LIQUIBASE_CHANGELOGS:/changelogs \
-mlaccetti/liquibase \
+konjak/liquibase \
 "diff"
 ```
 
@@ -68,7 +68,7 @@ docker run -it \
 --entrypoint="/scripts/liquibase_command.sh" \
 -v /$LIQUIBASE_CHANGELOGS:/changelogs \
 -e CHANGELOG_FILE=$LIQUIBASE_CHANGELOG_FILE \
-mlaccetti/liquibase\
+konjak/liquibase\
 "update"
 ```
 
@@ -96,7 +96,7 @@ docker run -it \
   -e DB_ENV_POSTGRES_PASSWORD=$DB_PASSWORD \
   -e DB_SCHEMA_NAME=$DB_SCHEMA_NAME \
   -e DIFF_TYPES=data \
-  mlaccetti/liquibase \
+  konjak/liquibase \
   "generate"
 
 ```
